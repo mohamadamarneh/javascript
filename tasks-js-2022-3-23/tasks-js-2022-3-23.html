@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#hi {
+    
+    width: 500px;
+    background-color: yellow;
+    text-align: center;
+}
+#task{
+    width: 200px;
+    height: 200px;
+}
+#tex{
+    
+    width: 500px;
+    display: block;
+    height: 200px;
+    border: 2px black solid ;
+}
+</style>
+
+<body>
+    <h2>task1</h2>
+
+    <div >
+        <h1 id="hi" onmouseover="document.getElementById('hi').innerHTML='can i help you???'" 
+        onmouseout="document.getElementById('hi').innerHTML='hello world! '"
+        >hello world! </h1>
+    </div>
+    <hr><br>
+    <h2>task2</h2>
+    <div id="task" onclick="this.style.backgroundColor='red'">click me</div>
+     <hr><br>
+     <h2>part3</h2>
+     <select name="" id="sele" onchange="flagy(document.getElementById('sele').value)">
+         <option value="flags/download.png">jordan</option>
+         <option value="flags/pal.png">palestine</option>
+         <option value="flags/egy.png">eygpt</option>
+         <option value="flags/oma.png">oman</option>
+     </select>
+     <h3 id="tt">dacacdcqacwqcq</h3>
+     <img src="flags/download.png" alt="" id="flag" height="200px" width="300px" >
+     <hr><br>
+     <h2>part4</h2>
+     <select name="" id="faml" onchange="famly(document.getElementsByClassName('faml').value)">
+         <option value=" Arial">arial</option>
+         <option value="Franklin Gothic Medium">font 2</option>
+         <option value="Segoe UI">font 3</option>
+         <option value='"Impact"'>font 4</option>
+     </select>
+     <input  value="14" id="pixle" type="number" min="1" onchange="sizel(document.getElementById('pixle').value)"> 
+    <label for="">italic</label>
+     <input  onclick="ita()" id="italic" type="checkbox">
+     <label for="">bold</label>
+     <input type="checkbox">
+     <label for="">underline</label>
+     <input type="checkbox">
+     
+
+
+     <input id="tex" type="text" value="i am text">
+     <div id="tex">aciuanciuaidcuicaud</div>
+     
+
+    <script>
+        document.getElementById("task").style.backgroundColor="blue"
+        function flagy(x){
+            document.getElementById("flag").src= x
+        }
+        function sizel(y){
+            // document.getElementById("tt").innerHTML="mddkwrbwr"
+
+            document.getElementById("tex").style.fontSize=`${y}px`
+        }
+        function famly(z){
+            document.getElementById("tt").innerHTML= z
+
+            document.getElementById("tex").style.fontFamily= z
+        }
+        document.getElementById("tt").style.fontFamily="Franklin Gothic Medium"
+        function ita(){
+            var i=  document.getElementById("italic")
+            if( i.checked){
+            document.getElementById("tex").style.fontStyle="italic"}
+            else{
+                document.getElementById("tex").style.fontStyle ="bold"
+            }
+
+
+            
+        }
+
+
+    </script>
+</body>
+</html>
