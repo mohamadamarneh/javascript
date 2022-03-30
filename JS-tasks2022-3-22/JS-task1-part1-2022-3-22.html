@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>part 1</h1>
+    <hr>
+    <h1>insert two numbers to know whats the bigger</h1>
+
+    <label for="">num 1:</label> <input type="number" id="num1">
+    <label for="">num 2:</label> <input type="number" id="num2">
+    <button id="bot" onclick="comp()"> how?</button>
+    <h2 id="resu"> the bigger number is :</h2>
+
+
+
+
+
+
+
+    <script>
+        function comp() {
+
+
+            if (document.getElementById("num1").value > document.getElementById("num2").value) {
+                document.getElementById("resu").innerHTML = "the bigger number is :" + document.getElementById("num1").value;
+
+
+            } else if (document.getElementById("num1").value < document.getElementById("num2").value) {
+                document.getElementById("resu").innerHTML = "the bigger number is :" + document.getElementById("num2").value;
+
+            } else {
+                document.getElementById("resu").innerHTML = "not number or equals "
+            }
+
+
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

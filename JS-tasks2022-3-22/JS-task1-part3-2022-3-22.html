@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .ds{
+            
+            /* visibility: hidden; */
+            visibility: visible;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1 id="go">i have id </h1>
+    <div id="dr">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+
+
+    </div>
+    <h2 class="we"> i have className</h2>
+    <h2 class="ds"> i have className too ):</h2>
+
+    <h3 id="rrrr"></h3>
+    <div >    
+        <button onclick="hide()">click to hide second line</button>
+        <button onclick="show()" >click to show second line</button>
+
+    
+    </div>
+
+
+    <script>
+        let x =document.querySelectorAll("h1").tostring().innerHTML ;
+        document.getElementById("rrrr").innerHTML=x;
+        function hide(){
+            document.getElementById("dr").style.visibility="hidden"
+        }
+        function show(){
+            document.getElementById("dr").style.visibility="visible"
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
