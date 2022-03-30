@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for>first name: </label> <input type="text" onchange="name1(this.value)">  <span id="fsameh"></span><br>
+    <label for>last name: </label> <input type="text" onchange="name2(this.value)"> <span id="lsameh"></span><br>
+    <label for> your birth date: </label> <input type="date" max="2022-03-05" > <br>
+    <label for>email : </label> <input type="text" onchange="mail1(this.value)"> <span id="mailh"></span> <br>
+    <label for> password : </label> <input type="text" onchange="pass1(this.value)">  <span id="passh"></span><br>
+    <script>
+        function pass1(x) {
+            let anemail1 = x.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/)
+
+            if (anemail1) {
+                console.log(anemail1)
+                document.getElementById("passh").style.color = "green"
+                document.getElementById("passh").innerHTML = "sucsses"
+            } else {
+            
+                document.getElementById("passh").innerHTML = "problem"
+                document.getElementById("passh").style.color = "red"
+            }
+        }
+        function name1(x) {
+            let anemail1 = x.match(/^[A-Za-z]+$/)
+            if (anemail1 != Number ) {
+                console.log(anemail1)
+                document.getElementById("fsameh").style.color = "green"
+                document.getElementById("fsameh").innerHTML = "sucsses"
+            } else {
+                document.getElementById("fsameh").innerHTML = "problem"
+                document.getElementById("fsameh").style.color = "red"
+            }
+        }
+        function name2(x) {
+            let anemail1 = x.match(/^[A-Za-z]+$/)
+            if (anemail1 != Number ) {
+                console.log(anemail1)
+                document.getElementById("lsameh").style.color = "green"
+                document.getElementById("lsameh").innerHTML = "sucsses"
+            } else {
+                document.getElementById("lsameh").innerHTML = "problem"
+                document.getElementById("lsameh").style.color = "red"
+            }
+        }
+
+        function mail1(x) {
+            let anemail1 = x.search(/@/)
+            let anemail2 = x.search(/\./)
+            if (anemail1 != -1 && anemail2 != -1 ) {
+                console.log(anemail1)
+                document.getElementById("mailh").style.color = "green"
+                document.getElementById("mailh").innerHTML = "sucsses"
+            } else {
+                document.getElementById("mailh").innerHTML = "problem"
+                document.getElementById("mailh").style.color = "red"
+            }
+        }
+    </script>
+</body>
+</html>
